@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head th:replace="${view} :: head"></head>
+<body>
+	<section id="container">
+		<header th:replace="comunes/encabezado :: encabezado"></header>
+		<aside th:replace="comunes/menu :: menu"></aside>
+		<section th:replace="${view} :: content"></section>
+		<footer th:replace="comunes/footer :: pie"></footer>
+	</section>
+</body>
+	<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function desplegar(elemento){
+			elemento.style.display = (elemento.style.display === "none") ? "block" : "none";
+			if (elemento === document.getElementById("sidebar")){
+				document.getElementById("main-content").style = (elemento.style.display === "none") ? "margin-left: 0;" : "margin-left: 210px;";
+			}
+		}
+		document.querySelector(".sidebar-toggle-box").addEventListener("click", () =>{
+			desplegar(document.getElementById("sidebar"));
+		});
+		
+		let i = 0;
+		document.getElementById("btn-sub-menu-tel").addEventListener("click", () =>{
+			if (i === 0){
+				desplegar(document.getElementById("sub-tel"));
+				i++;
+			}
+			desplegar(document.getElementById("sub-tel"));
+		});
+		
+		let j = 0;
+		document.getElementById("btn-sub-menu-password").addEventListener("click", () =>{
+			if (j === 0){
+				desplegar(document.getElementById("sub-password"));
+				j++;
+			}
+			desplegar(document.getElementById("sub-password"));
+		});
+	</script>
+</html>

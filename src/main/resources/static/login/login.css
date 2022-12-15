@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.contenedor{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	background-image: url("login.png");
+	background-repeat: repeat;
+	overflow: hidden;
+	background: #2b5876;
+	background: -webkit-linear-gradient(to top, #4e4376, #2b5876);
+	background: linear-gradient(to top, #4e4376, #2b5876);
+}
+
+.contenedor .contenedor-login{
+	width: 450px;
+	margin: 0 auto;
+	padding: 25px 10px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 15px;
+}
+
+.contenedor .login-encabezado{
+	margin: 25px 0;
+	color: #fff;
+}
+
+.contenedor .contenedor-login .login-logo{
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.contenedor .contenedor-login .login-logo .img-logo{
+	width: 100%;
+}
+
+.contenedor .contenedor-login .form-login{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.contenedor .contenedor-login .form-login .campo-login{
+	width: 100%;
+	font-size: 25px;
+	margin: 10px 0;
+	padding: 5px 2px;
+	border: none;
+	outline: none;
+	border-bottom: 3px solid #417A9D;
+}
+
+.contenedor .contenedor-login .form-login .campo-login:focus{
+	border-bottom: 3px solid #2CAAF9;
+}
+
+.mensaje{
+	background-color: red;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+	margin: 15px 0;
+	display: none;
+}
+
+.sesion{
+	width: 70%;
+	padding: 10px 5px;
+	margin: 10px auto;
+	border: none;
+	border-radius: 5px;
+	background-color: #417A9D;
+	color: #fff;
+	font-size: 20px;
+}
+
+.sesion:hover{
+	cursor: pointer;
+}
+
+@media(max-width: 500px){
+	.contenedor .contenedor-login{
+		width: 350px;
+	}
+}
+
+@media(max-width: 385px){
+	.contenedor .contenedor-login{
+		width: 290px;
+	}
+}

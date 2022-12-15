@@ -1,0 +1,25 @@
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<body>
+		<header class="header black-bg" th:fragment="encabezado">
+	      <div class="sidebar-toggle-box">
+	        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+	      </div>
+	      <a th:href="@{/}" class="logo"><b>Panel <span>Admon.</span></b></a>
+	      <div class="top-menu">
+	        <ul class="nav pull-right top-menu">
+	          <li><a id="salir" class="logout" th:href="@{/login/destroy}" style="background-color: #41B3A3;">Cerrar Sesión</a></li>
+	        </ul>
+	      </div>
+	      <script type="text/javascript">
+		      document.getElementById("salir").addEventListener("click", (e) =>{
+		    	  	localStorage.clear();
+	    			document.cookie = "auth=; max-age=0";
+	    			document.cookie = "rol=; max-age=0; path=/usuario";
+		    	});
+	      </script>
+	    </header>
+	</body>
+</html>

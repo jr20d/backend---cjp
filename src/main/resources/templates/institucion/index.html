@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head th:fragment="head">
+		<meta charset="UTF-8">
+		<link href="/img/logo.ico" rel="icon">
+		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/estilos.css" rel="stylesheet">
+		<link href="/css/style-responsive.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Instituciones - CJP</title>
+		<script src="/js/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+	</head>
+	<body>
+		<section id="main-content" th:fragment="content">
+	      <section class="wrapper site-min-height">
+	        <h3><i class="fa fa-angle-right"></i> [[${titulo}]]</h3>
+	        <button type="button" id="agregar" class="btn btn-info"><i class="fas fa-plus"></i> AGREGAR INSTITUCIÓN</button>
+	        <div id="mensaje-banner" class="col-md-12">
+	        	<br>
+			</div>
+	        <div class="row mt">
+	          <div class="col-lg-12">
+	            <div class="contenedor-tarjeta" id="instituciones-registros">
+	            </div>
+	          </div>
+	        </div>
+	        <script type="text/javascript" src="/js/institucion.js"></script>
+	      </section>
+	</body>
+</html>

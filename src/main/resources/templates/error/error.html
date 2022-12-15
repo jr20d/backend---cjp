@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<title>[[${error}]]</title>
+		<meta charset="UTF-8">
+		<link href="/img/logo.ico" rel="icon">
+		<link href="/css/error.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="principal-error">
+			<img src="/img/error.svg">
+			<h1>[[${error}]]</h1>
+			<p>[[${contenido}]] <a th:if='${error != "ERROR 500"}' th:href="@{/}">regresar</a></p>
+		</div>
+	</body>
+</html>

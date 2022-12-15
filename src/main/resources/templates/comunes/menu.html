@@ -1,0 +1,66 @@
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">eaf.org">
+	<body>
+		<aside th:fragment="menu">
+	      <div id="sidebar" class="nav-collapse" style="overflow: auto;">
+	        <ul class="sidebar-menu" id="nav-accordion">
+	          <p class="centered"><a th:href="@{/}"><img src="/img/logo.png" class="img-circle" width="80"></a></p>
+	          <h5 class="centered">Casa Juvenil de Paz</h5>
+	          <li class="mt">
+	            <a th:classappend="${(activo == 1)}? active : none" th:href="@{/}">
+	              <i class="fa fa-newspaper"></i>
+	              <span>Noticias</span>
+	              </a>
+	          </li>
+	          <li class="mt">
+	            <a th:classappend="${(activo == 2)}? active : none" th:href="@{/usuario}">
+	              <i class="fa fa-users"></i>
+	              <span>Usuarios</span>
+	              </a>
+	          </li>
+	          <li class="mt">
+	            <a th:classappend="${(activo == 3)}? active : none" th:href="@{/seccion}">
+	              <i class="fa fa-images"></i>
+	              <span>Secciones</span>
+	              </a>
+	          </li>
+	          <li class="mt">
+	            <a th:classappend="${(activo == 4)}? active : none" th:href="@{/institucion}">
+	              <i class="fas fa-landmark"></i>
+	              <span>Instituciones</span>
+	              </a>
+	          </li>
+	          <li class="sub-menu mt">
+	            <a id="btn-sub-menu-tel" href="#">
+	              <i class="fas fa-phone-alt"></i>
+	              <span>Telefonos</span>
+	              </a>
+	            <ul id="sub-tel" class="sub" style="margin-top: 15px;">
+	            </ul>
+	          </li>
+	          <li class="sub-menu mt">
+	            <a id="btn-sub-menu-password" href="#">
+	              <i class="fas fa-key"></i>
+	              <span>Contraseña</span>
+	              </a>
+	            <ul id="sub-password" class="sub" style="margin-top: 15px;">
+	            	<div class="form-group col-md-12">
+						<input id="pass1" type="password" class="form-control col-md-12" placeholder="Contraseña" data-rule="minlen:4">
+					</div>
+					<div class="form-group col-md-12">
+						<input id="pass2" type="password" class="form-control col-md-12" placeholder="Confirmación" data-rule="minlen:4">
+					</div>
+					<div class="form-group text-center">
+		              	<button class="btn btn-info" id="guardarPass">Guardar</button>
+					</div>
+	            </ul>
+	          </li>
+	        </ul>
+	      </div>
+	      <script type="text/javascript" src="/js/telefono.js"></script>
+	      <script type="text/javascript" src="/js/password.js"></script>
+	    </aside>
+	</body>
+</html>
