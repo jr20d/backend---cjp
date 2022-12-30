@@ -1,5 +1,5 @@
 # Backend para sitio de gestión de contenido
-# Herramentas Utilizandas
+# Herramientas Utilizadas
 * API con Spring Boot.
 * Thymeleaf para la creación de vistas.
 * Seguridad con Spring Security (basados en token de tipo JWT).
